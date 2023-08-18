@@ -70,7 +70,9 @@ jobs:
 
       - name: Set up kubectl
         uses: azure/setup-kubectl@v1
-    
+
+      - run: ls
+      
       - name: Deploy Frontend Deployment
         run: kubectl --kubeconfig kubeconfig apply -f ./frontend-deployment.yaml
 
