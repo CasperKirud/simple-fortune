@@ -72,13 +72,13 @@ jobs:
         uses: azure/setup-kubectl@v1
     
       - name: Deploy Frontend Deployment
-        run: kubectl --kubeconfig kubeconfig apply -f frontend-deployment.yaml
+        run: kubectl --kubeconfig kubeconfig apply -f ./frontend-deployment.yaml
 
       - name: Deplpy Frontend Service
-        run: kubectl --kubeconfig kubeconfig apply -f frontend-service.yaml
+        run: kubectl --kubeconfig kubeconfig apply -f ./frontend-service.yaml
 
       - name: Deploy Backend Deployment
-        run: kubectl --kubeconfig kubeconfig apply -f backend-deployment.yaml
+        run: kubectl --kubeconfig kubeconfig apply -f ./backend-deployment.yaml
 
       - name: Deploy Backend Service
-        run: kubectl --kubeconfig kubeconfig apply -f backend-service.yaml
+        run: kubectl --kubeconfig kubeconfig apply -f ./backend-service.yaml

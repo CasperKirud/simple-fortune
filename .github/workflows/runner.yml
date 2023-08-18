@@ -20,4 +20,4 @@ jobs:
           node-version: '14'
 
       - name: Deploy Application
-        run: ./deploy-script.sh
+        run: chmod +x ./deploy-script.sh && ./deploy-script.sh
