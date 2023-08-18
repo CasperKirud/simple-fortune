@@ -4,9 +4,18 @@ services:
     build:
       context: ./frontend
     ports:
-      - "8080:8080"  #this is the port for the frontend
+      - "8080:8080"
   backend:
     build:
       context: ./backend
     ports:
-      - "9000:9000"  #this is the port for the backend
+      - "9000:9000"
+    depends_on:
+      - redis
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
