@@ -74,13 +74,13 @@ jobs:
       - run: ls
       
       - name: Deploy Frontend Deployment
-        run: kubectl --kubeconfig kubeconfig apply -f ./frontend-deployment.yaml
+        run: kubectl --kubeconfig kubeconfig apply -f simple-fortune/frontend-deployment.yaml
 
       - name: Deplpy Frontend Service
-        run: kubectl --kubeconfig kubeconfig apply -f ./frontend-service.yaml
+        run: kubectl --kubeconfig kubeconfig apply -f simple-fortune/frontend-service.yaml
 
       - name: Deploy Backend Deployment
-        run: kubectl --kubeconfig kubeconfig apply -f ./backend-deployment.yaml
+        run: kubectl --kubeconfig kubeconfig apply -f simple-fortune/backend-deployment.yaml
 
       - name: Deploy Backend Service
-        run: kubectl --kubeconfig kubeconfig apply -f ./backend-service.yaml
+        run: kubectl --kubeconfig kubeconfig apply -f simple-fortune/backend-service.yaml
